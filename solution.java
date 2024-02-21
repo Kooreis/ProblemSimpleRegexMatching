@@ -1,11 +1,7 @@
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the string:");
-        String s = scanner.nextLine();
-        System.out.println("Enter the pattern:");
-        String p = scanner.nextLine();
+public static boolean isMatch(String text, String pattern) {
+        if (pattern.isEmpty()) {
+            return text.isEmpty();
+        }
+        boolean first_match = (!text.isEmpty() &&
+                (pattern.charAt(0) == text.charAt(0) || pattern.charAt(0) == '.'));
     }
-}
